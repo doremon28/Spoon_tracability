@@ -35,9 +35,11 @@ public class ConfigOptionsParam {
                 .hasArg()
                 .desc(OptionsCli.OUTPUT_JRE_PATH_DESCRIPTION)
                 .build();
-        this.maven = Option.builder(OptionsCli.MAVEN)
+        this.maven = Option.builder(OptionsCli.MAVEN_SHORT)
                 .desc(OptionsCli.MAVEN_DESCRIPTION)
-                .longOpt(OptionsCli.MAVEN_SHORT)
+                .longOpt(OptionsCli.MAVEN)
+                .hasArg()
+                .required(true)
                 .build();
         this.options = new Options();
         this.options.addOption(help);
