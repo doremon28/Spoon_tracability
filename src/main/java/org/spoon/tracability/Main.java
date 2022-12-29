@@ -4,6 +4,8 @@ import org.apache.commons.cli.*;
 import org.slf4j.Logger;
 import org.spoon.tracability.shared.constants.OptionsCli;
 import org.spoon.tracability.shared.utils.ConfigOptionsParam;
+import org.spoon.tracability.spoon.processors.ClassProcessor;
+import org.spoon.tracability.spoon.processors.LogGeneratorProcessor;
 
 public class Main {
 
@@ -17,6 +19,10 @@ public class Main {
         LOGGER.info("projectPath: {}", projectPath);
         LOGGER.info("outputJrePath: {}", outputJrePath);
         LOGGER.info("maven: {}", maven);
+        boolean isMavenProject = Boolean.parseBoolean(maven);
+        ClassProcessor classProcessor = new ClassProcessor();
+        LogGeneratorProcessor logGeneratorProcessor = new LogGeneratorProcessor(projectPath, isMavenProject);
+        logGeneratorProcessor.apply(classProcessor);
     }
 
     private static void configurationCli(String[] args) {
