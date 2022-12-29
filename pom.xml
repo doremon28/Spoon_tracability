@@ -19,6 +19,8 @@
         <pVersion.compiler>3.8.0</pVersion.compiler>
         <pVersion.surefire>2.22.1</pVersion.surefire>
         <version.commons.cli>1.5.0</version.commons.cli>
+        <slf4j.version>2.0.5</slf4j.version>
+        <logback.version>1.4.5</logback.version>
 
     </properties>
     <dependencies>
@@ -43,6 +45,23 @@
             <artifactId>commons-cli</artifactId>
             <version>${version.commons.cli}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>
