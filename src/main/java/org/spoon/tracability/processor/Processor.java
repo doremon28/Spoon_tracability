@@ -5,8 +5,8 @@ public abstract class Processor<T> {
     protected T parser;
 
     /* CONSTRUCTOR */
-    protected Processor(String projectPath) {
-        setParser(projectPath);
+    protected Processor(String projectPath, boolean isMavenProject) {
+        setParser(projectPath, isMavenProject);
     }
 
     /* METHODS */
@@ -14,5 +14,5 @@ public abstract class Processor<T> {
         return parser;
     }
 
-    public abstract void setParser(String projectPath);
+    public abstract void setParser(String projectPath, boolean isMavenProject);
 }

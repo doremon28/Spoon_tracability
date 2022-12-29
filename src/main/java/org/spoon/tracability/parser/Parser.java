@@ -9,12 +9,23 @@ public abstract class Parser<T> {
     protected String projectPath;
     protected String projectSrcPath;
     protected String projectBinPath;
+
+    protected boolean isMavenProject;
     protected T parser;
 
     /* CONSTRUCTOR */
-    protected Parser(String projectPath) {
+    protected Parser(String projectPath, boolean isMavenProject) {
         setProjectPaths(projectPath);
+        setMavenProject(isMavenProject);
         configure();
+    }
+
+    public void setMavenProject(boolean mavenProject) {
+        isMavenProject = mavenProject;
+    }
+
+    public boolean isMavenProject() {
+        return isMavenProject;
     }
 
     /* METHODS */
@@ -45,7 +56,7 @@ public abstract class Parser<T> {
     private void setProjectPaths(String projectPath) {
         setProjectPath(projectPath);
         setProjectSrcPath(projectPath+ File.separator+"src"+File.separator);
-        setProjectBinPath(projectPath+File.separator+"bin"+File.separator);
+        setProjectBinPath(projectPath+File.separator+"target"+File.separator);
     }
 
     public T getParser() {
