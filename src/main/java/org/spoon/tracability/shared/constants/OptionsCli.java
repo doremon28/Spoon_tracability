@@ -18,4 +18,10 @@ public class OptionsCli {
     public static final String MAVEN_SHORT = "m";
     public static final String MAVEN_DESCRIPTION = "If the project is a maven project";
 
+    public static final String SPOONED_OUTPUT = "spoonedOutput";
+    public static final String SPOONED_OUTPUT_SHORT = "s";
+    public static final String SPOONED_OUTPUT_DESCRIPTION = "The path of the output spooned src";
+
+    public static String SPOONED_OUTPUT_RESULT = null;
+
 }

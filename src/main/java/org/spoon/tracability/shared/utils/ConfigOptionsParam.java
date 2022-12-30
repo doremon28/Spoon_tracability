@@ -13,6 +13,8 @@ public class ConfigOptionsParam {
 
     private final Option maven;
 
+    private final Option spoonedOutput;
+
     private  final Options options;
 
     public Options getOptions() {
@@ -41,10 +43,16 @@ public class ConfigOptionsParam {
                 .hasArg()
                 .required(true)
                 .build();
+        spoonedOutput = Option.builder(OptionsCli.SPOONED_OUTPUT_SHORT)
+                .longOpt(OptionsCli.SPOONED_OUTPUT)
+                .hasArg()
+                .desc(OptionsCli.SPOONED_OUTPUT_DESCRIPTION)
+                .build();
         this.options = new Options();
         this.options.addOption(help);
         this.options.addOption(projectPath);
         this.options.addOption(outputJrePath);
         this.options.addOption(maven);
+        this.options.addOption(spoonedOutput);
     }
 }
