@@ -68,8 +68,8 @@ public class Main {
      */
     private static void configurationCli(String[] args) {
         LOGGER.info("Start the configuration of the CLI");
-        try {
         ConfigOptionsParam configOptionsParam = new ConfigOptionsParam();
+        try {
         CommandLineParser commandLineParser = new DefaultParser();
         CommandLine commandLine = commandLineParser.parse(configOptionsParam.getOptions(), args);
         projectPath = commandLine.getOptionValue(OptionsCli.PROJECT_PATH);
@@ -86,6 +86,9 @@ public class Main {
             System.exit(0);
         }
         } catch (ParseException e) {
+            final HelpFormatter formatter = new HelpFormatter();
+            formatter.printHelp("Spoon-Logging", configOptionsParam.getOptions(), true);
+            System.exit(0);
             LOGGER.error("Error while parsing the command line arguments", e);
         }
     }

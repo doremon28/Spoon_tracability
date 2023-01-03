@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Main-Class: org.spoon.tracability.Main
+Class-Path: org.eclipse.core.runtime-3.26.100.jar org.eclipse.core.comma
+ nds-3.10.300.jar jackson-core-2.9.10.jar commons-io-2.6.jar plexus-util
+ s-3.0.24.jar jackson-databind-2.9.10.jar maven-shared-utils-3.2.1.jar c
+ ommons-lang3-3.8.1.jar hamcrest-core-1.3.jar InMemoryJavaCompiler-1.3.0
+ .jar commons-cli-1.5.0.jar xz-1.8.jar slf4j-api-2.0.5.jar org.osgi.serv
+ ice.prefs-1.1.2.jar jsap-2.1.jar org.eclipse.text-3.12.300.jar logback-
+ classic-1.4.5.jar org.eclipse.equinox.registry-3.11.200.jar log4j-1.2.1
+ 7.jar org.eclipse.osgi-3.18.200.jar org.eclipse.equinox.common-3.17.0.j
+ ar plexus-component-annotations-1.7.1.jar org.eclipse.core.expressions-
+ 3.8.200.jar maven-model-3.5.0.jar spoon-core-8.0.0.jar org.eclipse.jdt.
+ core-3.16.0.jar osgi.annotation-8.0.1.jar org.eclipse.core.contenttype-
+ 3.8.200.jar maven-invoker-3.0.1.jar org.eclipse.core.jobs-3.13.200.jar 
+ org.eclipse.equinox.preferences-3.10.100.jar logback-core-1.4.5.jar org
+ .eclipse.core.filesystem-1.9.500.jar jackson-annotations-2.9.10.jar com
+ mons-compress-1.19.jar org.eclipse.core.resources-3.18.100.jar org.ecli
+ pse.equinox.app-1.6.200.jar junit-4.12.jar
+
