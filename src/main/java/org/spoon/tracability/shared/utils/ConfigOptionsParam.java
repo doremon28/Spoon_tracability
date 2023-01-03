@@ -5,22 +5,51 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.spoon.tracability.shared.constants.OptionsCli;
 
+/**
+ * The type Config options param.
+ */
 public class ConfigOptionsParam {
+    /**
+     * The Project path.
+     */
     private final Option projectPath;
+    /**
+     * The Output jre path.
+     */
     private final Option outputJrePath;
 
+    /**
+     * The Help.
+     */
     private final Option help;
 
+    /**
+     * The Maven.
+     */
     private final Option maven;
 
+    /**
+     * The Spooned output.
+     */
     private final Option spoonedOutput;
 
+    /**
+     * The Options.
+     */
     private  final Options options;
 
+    /**
+     * Gets options.
+     *
+     * @return the options
+     */
     public Options getOptions() {
         return options;
     }
 
+    /**
+     * Instantiates a new Config options param.
+     */
     public ConfigOptionsParam() {
         this.help = Option.builder(OptionsCli.HELP_SHORT)
                 .longOpt(OptionsCli.HELP)

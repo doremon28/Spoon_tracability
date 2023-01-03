@@ -9,15 +9,38 @@ import org.spoon.tracability.spoon.processors.LogGeneratorProcessor;
 
 import java.io.File;
 
+/**
+ * The type Main.
+ */
 public class Main {
 
+    /**
+     * The constant LOGGER.
+     */
     private static final Logger LOGGER = org.slf4j.LoggerFactory.getLogger(Main.class);
+    /**
+     * The constant projectPath.
+     */
     private static String projectPath;
+    /**
+     * The constant outputJrePath.
+     */
     private static String outputJrePath;
+    /**
+     * The constant maven.
+     */
     private static String maven;
 
+    /**
+     * The constant spoonedOutput.
+     */
     private static String spoonedOutput;
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         LOGGER.info("Start the program");
         configurationCli(args);
@@ -38,6 +61,11 @@ public class Main {
         LOGGER.info("End the program");
     }
 
+    /**
+     * Configuration cli.
+     *
+     * @param args the args
+     */
     private static void configurationCli(String[] args) {
         LOGGER.info("Start the configuration of the CLI");
         try {
